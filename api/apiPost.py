@@ -1,4 +1,4 @@
-import SignUtil
+from api import SignUtil
 import requests
 import json
 from urllib import parse
@@ -19,7 +19,7 @@ body = {
 
 #**********************************************************************
 #获取签名
-sign = SignUtil.getSign(url,parames,body);
+sign = SignUtil.getSign(url, parames, body);
 #拼装请求URL
 url +=  "?"+parse.urlencode(parames)+"&sign="+sign
 headers = {'content-type': 'application/json'}
