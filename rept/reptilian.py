@@ -11,6 +11,8 @@ soup = BeautifulSoup(html, 'html.parser')
 # print(soup.prettify())
 
 # 用Beautiful Soup结合正则表达式来提取包含所有图片链接（img标签中，class=**，以.jpg结尾的链接）的语句
+
+#页面中img结构 <img src="https://pic2.zhimg.com/80/9ea38ee8037b66b88a2425f833c4248d_hd.jpg" data-rawwidth="1528" data-rawheight="1528" class="origin_image zh-lightbox-thumb lazy" width="1528" data-original="https://pic2.zhimg.com/9ea38ee8037b66b88a2425f833c4248d_r.jpg" data-actualsrc="https://pic2.zhimg.com/50/9ea38ee8037b66b88a2425f833c4248d_hd.jpg">
 links = soup.find_all('img', "origin_image zh-lightbox-thumb", src=re.compile(r'.jpg$'))
 print(links)
 
