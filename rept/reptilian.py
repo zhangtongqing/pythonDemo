@@ -2,6 +2,7 @@ from urllib import request
 from bs4 import BeautifulSoup
 import re
 import time
+import os
 
 url = "https://www.zhihu.com/question/22918070"
 #打开Url,获取HttpResponse返回对象并读取其ResposneBody
@@ -18,6 +19,9 @@ print(links)
 
 # 设置保存图片的路径，否则会保存到程序当前路径
 path = r'D:\Python\test\images'  # 路径前的r是保持字符串原始值的意思，就是说不对其中的符号进行转义
+isexiste  =  os.path.exists(path)
+if isexiste == False:
+    os.makedirs(path)
 for link in links:
     print(link.attrs['src'])
     # 保存链接并命名，time.time()返回当前时间戳防止命名冲突
