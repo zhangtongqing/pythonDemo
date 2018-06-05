@@ -8,6 +8,8 @@
           SignUtil.py    签名工具类
           autoTest.py    自动化测试示例
 
+-auto  -- 自动化测试示例
+
 -base  一些基础语法练习
 
 -rept  爬虫示例
