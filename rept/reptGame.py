@@ -17,7 +17,7 @@ Modify:
 """
 def hero_imgs_download(heros_url,header):
     req = requests.get(url = heros_url, headers = header).json()
-    print(req)
+    #print(req)
     hero_num = len(req['list'])
     print('一共有%d个英雄' % hero_num)
     hero_images_path = r'D:\Python\test\gameImage'
