@@ -17,3 +17,10 @@
 -study 一些杂项没分类的模块
 
 -venv  创建工程时自动生成的，python依赖，第三方类库一般在这里
+
+
+--pycharm 安装mongodb插件（mongodb学习）
+    plugins搜索mongo 安装，成功后；
+    打开mongodb exploerer 点击设置：
+    1.选择安装的mongo shell 路径下的mongo.exe文件  工具下载地址：链接：https://pan.baidu.com/s/1LsegeidmEr2StOheO5a3Ew 密码：osde
+    2.新建一个connection 完成；  这里可以连接我搭建好的mongodb数据库：211.159.153.228:27017 用户名密码空
