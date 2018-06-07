@@ -8,6 +8,10 @@ class TestMathFunc(unittest.TestCase):
     def test_add1(self):
         print("单元测试第二个方法")
 
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
 
