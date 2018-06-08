@@ -19,5 +19,17 @@ def get():
         print("条件查询：",i)
     print("查询一个：",my_set.find_one({"name":"mongodb"}))
 
+def getByid():
+    """根据ID查询"""
+    id = my_set.find_one({"name": "mongodb"})["_id"]
+    print("id:",id)
+
+
+def deleteById():
+    """根据ID删除"""
+    id = my_set.find_one({"name": "mongodb"})["_id"]
+    my_set.remove(id);
 if __name__ == '__main__':
     get();
+    getByid();
+    my_set.remove(id)
