@@ -32,4 +32,3 @@ def deleteById():
 if __name__ == '__main__':
     get();
     getByid();
-    my_set.remove(id)
