@@ -18,6 +18,8 @@
 
 -venv  创建工程时自动生成的，python依赖，第三方类库一般在这里
 
+-robot 利用itchat对接微信，利用图灵接口做一个自动回复机器人
+
 
 --pycharm 安装mongodb插件（mongodb学习）
     plugins搜索mongo 安装，成功后；
