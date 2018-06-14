@@ -1,3 +1,4 @@
+#coding=utf-8
 ###################### 完整代码##############################
 # 加载库
 from itchat.content import *
@@ -47,6 +48,10 @@ def group_text_reply(msg):
   item = group_id(u'Python学习交流群') # 根据自己的需求设置
   if msg['ToUserName'] == item:
     itchat.send(u'%s' % tuling(msg['Text']), item)
+  elif msg['isAt'] == item:
+    itchat.send(u'%s' % tuling(msg['Text']), item)
+    itchat.get_head_img
 
 
+friends = itchat.get_friends(update=True)
 itchat.run()
