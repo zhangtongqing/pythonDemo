@@ -9,7 +9,7 @@ import itchat as itchat
 itchat.auto_login(hotReload = True)
 
 #获取好友信息
-friends = itchat.get_friends(update=True)[0:] #（当然你也可以进行输出，但是小编是看的头晕）
+friends = itchat.get_friends(update=True)[0:]
 user = friends[0]["UserName"]
 print("user:",user)
 if os.path.exists(user):
@@ -20,7 +20,7 @@ os.mkdir(user)
 num = 0
 for friend in friends:
     image = itchat.get_head_img(userName=friend["UserName"]) #用 itchat.get_head_img(userName=None)来爬取好友列表的头像
-    fileImage = open(user + "/" + str(num) + ".jpg",'wb') #将好友头像下载到本地文件夹
+    fileImage = open(user + "/" + str(num) + ".jpg",'wb+') #将好友头像下载到本地文件夹
     fileImage.write(image)
     fileImage.close()
     num += 1
