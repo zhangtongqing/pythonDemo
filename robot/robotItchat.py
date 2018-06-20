@@ -6,7 +6,11 @@ import requests
 import json
 import itchat
 
-
+"""
+将根据接受到的消息类型寻找对应的已注册的方法.
+如果一个消息类型没有对应的注册方法, 该消息将会被舍弃.
+在运行过程中也可以动态注册方法, 注册方式与结果不变.
+"""
 itchat.auto_login(hotReload = True)
 
 
@@ -46,11 +50,14 @@ def download_files(msg):
 def group_text_reply(msg):
   # 当然如果只想针对@你的人才回复，可以设置if msg['isAt']:
   item = group_id(u'Python学习交流群') # 根据自己的需求设置
-  if msg['ToUserName'] == item:
+  if msg['FromUserName'] == item:
     itchat.send(u'%s' % tuling(msg['Text']), item)
-  elif msg['isAt'] == item:
+
+@itchat.msg_register(TEXT, isGroupChat=True)
+def group_text_reply(msg):
+  item = group_id(u'四大名捕') # 根据自己的需求设置
+  if msg['FromUserName'] == item:
     itchat.send(u'%s' % tuling(msg['Text']), item)
-    itchat.get_head_img
 
 
 friends = itchat.get_friends(update=True)
